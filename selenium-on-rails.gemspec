@@ -11,8 +11,14 @@ Gem::Specification.new do |s|
   s.summary      = "Selenium on Rails provides an easy way to test Rails application with SeleniumCore[http://www.openqa.org/selenium-core/]."
   s.description  = "Selenium on Rails provides an easy way to test Rails application with SeleniumCore[http://www.openqa.org/selenium-core/]."
 
-  s.files        = Dir.glob("{lib,generators,templates}/**/*") +
-	           ['README.md', 'README']
+  s.files        = Dir.glob("lib/**/*") +
+                   Dir.glob("generators/**/*") +
+		   Dir.glob("templates/**/*") +
+                   Dir.glob("selenium-core/**/*") +
+                   Dir.glob("config/**/*") +
+                   Dir.glob("app/**/*") +
+                   ['README.md', 'README', 'rails/init.rb']
+
   s.platform     = Gem::Platform::RUBY
   s.require_path = 'lib'
   s.required_rubygems_version = '>= 1.3.6'
