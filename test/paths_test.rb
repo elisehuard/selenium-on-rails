@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + '/test_helper'
 require 'mocha'
 RAILS_ROOT = File.expand_path(File.dirname(__FILE__) + "/")
 
-class SeleniumOnRails::PathsTest < Test::Unit::TestCase
+class SeleniumOnRails::PathsTest < ActiveSupport::TestCase
   
   include SeleniumOnRails::Paths
   
