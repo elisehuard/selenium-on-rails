@@ -1,0 +1,32 @@
+Rendered /home/elise/gems/selenium-on-rails/test_data//_override (0.3ms)
+Rendered /home/elise/gems/selenium-on-rails/test_data//_override (0.4ms)
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-02 14:30:36) [GET]
+  Parameters: {"testname"=>"empty_suite"}
+Completed in 1ms (View: 0 | 404 Not Found [http://test.host/selenium/test_file?testname=empty_suite]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-02 14:30:36) [GET]
+  Parameters: {"testname"=>""}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/test_file?testname=]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-02 14:30:36) [GET]
+  Parameters: {"testname"=>""}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/test_file?testname=]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-02 14:30:36) [GET]
+  Parameters: {"testname"=>"suite_one/subsuite"}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/test_file?testname=suite_one%2Fsubsuite]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-02 14:30:36) [GET]
+  Parameters: {"testname"=>"suite_one"}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/test_file?testname=suite_one]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-02 14:30:36) [GET]
+  Parameters: {"testname"=>"TestSuite.html"}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/test_file?testname=TestSuite.html]

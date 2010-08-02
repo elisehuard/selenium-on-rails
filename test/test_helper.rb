@@ -1,23 +1,25 @@
 ENV["RAILS_ENV"] = "test"
-RAILS_ROOT = "test" unless defined?(RAILS_ROOT)
+#RAILS_ROOT = "test" unless defined?(RAILS_ROOT)
+require File.expand_path(File.dirname(__FILE__) + "/rails_root/config/environment")
+
 $: << File.expand_path(File.dirname(__FILE__) + "/../lib")
 
-require 'rubygems'
-require 'action_view'
-
-gem 'actionpack'
-require 'action_view/template_handler'
-require 'action_view/template_handlers/builder'
-require 'action_view/template_handlers/erb'
-require 'action_view/template_handlers/rjs'
-require 'action_view/helpers'
-require 'action_view/base'
-require 'action_view/partials'
-require 'action_view/template_error'
-gem 'activesupport'
-require 'active_support'
-
-require 'action_controller'
+#require 'rubygems'
+#require 'action_view'
+#
+#gem 'actionpack'
+#require 'action_view/template_handler'
+#require 'action_view/template_handlers/builder'
+#require 'action_view/template_handlers/erb'
+#require 'action_view/template_handlers/rjs'
+#require 'action_view/helpers'
+#require 'action_view/base'
+#require 'action_view/partials'
+#require 'action_view/template_error'
+#gem 'activesupport'
+#require 'active_support'
+#
+#require 'action_controller'
 
 require 'selenium_on_rails/suite_renderer'
 require 'selenium_on_rails/fixture_loader'
@@ -28,12 +30,12 @@ require 'action_controller/test_process'
 
 SeleniumController.append_view_path File.expand_path(File.dirname(__FILE__))
 
-def setup_controller_test(controller)
-  @controller = controller.new
-  ActionController::Routing::Routes.draw
-  @request    = ActionController::TestRequest.new
-  @response   = ActionController::TestResponse.new
-end
+#def setup_controller_test(controller)
+#  @controller = controller.new
+#  ActionController::Routing::Routes.draw
+#  @request    = ActionController::TestRequest.new
+#  @response   = ActionController::TestResponse.new
+#end
 
 
 class SeleniumController
@@ -64,7 +66,7 @@ class SeleniumController
 
 end
 
-class Test::Unit::TestCase
+class ActiveSupport::TestCase
   def assert_text_equal expected, actual
     assert_equal clean_text(expected), clean_text(actual)
   end
@@ -72,7 +74,6 @@ class Test::Unit::TestCase
   def clean_text text
     text.gsub("\t", '  ').gsub("\r", '').gsub("\n", '').gsub(/ *</, '<')
   end
-  
 end
 
 module SeleniumOnRails::PathsTestHelper
