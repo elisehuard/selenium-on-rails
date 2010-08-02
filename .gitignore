@@ -4,6 +4,8 @@ test_data/html.html
 test_data/html.rsel
 test_data/html.sel
 coverage/*
+test/rails_root/log/*
+test/rails_root/.bundle
 
 +== VERSION 40[http://github.com/jtrupiano/selenium-on-rails]
 0
