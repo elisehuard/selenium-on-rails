@@ -1,19 +1,17 @@
 require File.dirname(__FILE__) + '/test_helper'
 
-class SuiteRendererTest < Test::Unit::TestCase
+class SuiteRendererTest < ActionController::TestCase
+  tests SeleniumController
+
   def setup
-    @controller = SeleniumController.new
     @controller.extend(SeleniumOnRails::PathsTestHelper)
-    ActionController::Routing::Routes.draw
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
     @controller.layout_override =<<END
 <html><head><title>test layout</title></head><body>
 @content_for_layout
 </body></html>
 END
   end
-  
+
   def test_empty_suite
     get :test_file, :testname => 'empty_suite'
     

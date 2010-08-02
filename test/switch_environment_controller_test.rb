@@ -1,17 +1,17 @@
 require File.dirname(__FILE__) + '/test_helper'
-require 'mocha'
-require File.expand_path(File.dirname(__FILE__) + "/../app/controllers/switch_environment_controller")
 
-class SwitchEnvironmentControllerTest < Test::Unit::TestCase
+class SwitchEnvironmentControllerTest < ActionController::TestCase
+
+  tests SwitchEnvironmentController 
 
   def setup
     @config = mock()
-    setup_controller_test(SwitchEnvironmentController)
+    #setup_controller_test(SwitchEnvironmentController)
   end
   
   def test_index
-    SeleniumOnRailsConfig.expects(:get).with(:environments).returns("hello dolly")
+    SeleniumOnRailsConfig.expects(:get).with(:environments).at_least_once.returns(["hello", "dolly"])
     get :index
-    assert @response.body.include?('hello dolly')
+    assert @response.body.include?('hello, dolly')
   end
 end

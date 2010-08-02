@@ -7,7 +7,7 @@ class SeleniumOnRailsConfig
   end
 end
 
-class SeleniumOnRailsConfigTest < Test::Unit::TestCase
+class SeleniumOnRailsConfigTest < ActiveSupport::TestCase
   
   def setup
     SeleniumOnRailsConfig.reset_config

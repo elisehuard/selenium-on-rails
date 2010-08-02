@@ -1,17 +1,12 @@
 require File.dirname(__FILE__) + '/test_helper'
-require 'mocha'
 
-class SeleniumControllerTest < Test::Unit::TestCase
+class SeleniumControllerTest < ActionController::TestCase
+  tests SeleniumController
 
   def setup
-    @controller = SeleniumController.new
     @controller.extend(SeleniumOnRails::PathsTestHelper)
-    ActionController::Routing::Routes.draw
     SeleniumController.any_instance.stubs(:layout_path).returns(false)
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
     @result_dir = File.join(File.dirname(__FILE__), "..", "test_result")
-    
     @suite = <<EOS
 <script>
 </script>

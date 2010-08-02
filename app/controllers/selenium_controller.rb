@@ -15,7 +15,7 @@ class SeleniumController < ActionController::Base
     end
     @cleared_tables = clear_tables params[:clear_tables].to_s
     @loaded_fixtures = load_fixtures params[:fixtures].to_s
-    render :file => view_path('setup.rhtml'), :layout => layout_path\
+    render :file => 'setup.rhtml', :layout => layout_path\
   end
 
   def test_file
@@ -23,7 +23,7 @@ class SeleniumController < ActionController::Base
     filename = File.join selenium_tests_path, params[:testname]
     if File.directory? filename
       @suite_path = filename
-      render :file => view_path('test_suite.rhtml'), :layout => layout_path
+      render :file => 'test_suite.rhtml', :layout => layout_path
     elsif File.readable? filename
       render_test_case filename
     else
@@ -61,7 +61,7 @@ class SeleniumController < ActionController::Base
     
     File.open(log_path(params[:logFile] || 'default.yml'), 'w') {|f| YAML.dump(@result, f)}
     
-    render :file => view_path('record.rhtml'), :layout => layout_path
+    render :file => 'record.rhtml', :layout => layout_path
   end
 
   def record_table
