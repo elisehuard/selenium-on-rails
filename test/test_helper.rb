@@ -28,7 +28,10 @@ require File.expand_path(File.dirname(__FILE__) + "/../app/controllers/selenium_
 require File.expand_path(File.dirname(__FILE__) + "/../config/routes")
 require 'action_controller/test_process'
 
-SeleniumController.append_view_path File.expand_path(File.dirname(__FILE__))
+require 'mocha/api'
+require 'mocha/parameter_matchers'
+require 'mocha/integration/test_unit/ruby_version_186_and_above'
+#SeleniumController.append_view_path File.expand_path(File.dirname(__FILE__))
 
 #def setup_controller_test(controller)
 #  @controller = controller.new
@@ -64,6 +67,15 @@ class SeleniumController
       end
     end
 
+end
+
+class Test::Unit::TestCase
+# mocha is included via bundler in the test rails application
+# for some reason this stops essential modules from being loaded
+# TODO investigate for cleaner solution, maybe in mocha itself
+  include Mocha::API
+  include Mocha::ParameterMatchers
+  include Mocha::Integration::TestUnit::RubyVersion186AndAbove
 end
 
 class ActiveSupport::TestCase
