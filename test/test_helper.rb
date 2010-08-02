@@ -22,8 +22,8 @@ require 'action_controller'
 require 'selenium_on_rails/suite_renderer'
 require 'selenium_on_rails/fixture_loader'
 require 'selenium_helper'
-require 'controllers/selenium_controller'
-require File.expand_path(File.dirname(__FILE__) + "/../routes")
+require File.expand_path(File.dirname(__FILE__) + "/../app/controllers/selenium_controller")
+require File.expand_path(File.dirname(__FILE__) + "/../config/routes")
 require 'action_controller/test_process'
 
 SeleniumController.append_view_path File.expand_path(File.dirname(__FILE__))
