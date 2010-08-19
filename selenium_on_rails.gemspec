@@ -3,7 +3,7 @@
 $:.unshift File.expand_path('../lib', __FILE__)
 
 Gem::Specification.new do |s|
-  s.name         = "selenium-on-rails"
+  s.name         = "selenium_on_rails"
   s.version      = '1.0.0'
   s.authors      = ["Eric Smith"]
   s.email        = "eric@8thlight.com"
