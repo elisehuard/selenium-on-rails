@@ -1,12 +1,10 @@
 require File.dirname(__FILE__) + '/test_helper'
 
-class SeleniumSupportTest < Test::Unit::TestCase  
+class SeleniumSupportTest < ActionController::TestCase  
+  tests SeleniumController
+
   def setup
-    @controller = SeleniumController.new
     @controller.extend(SeleniumOnRails::PathsTestHelper)
-    ActionController::Routing::Routes.draw
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
   end
   
   def test_route

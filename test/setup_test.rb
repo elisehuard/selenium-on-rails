@@ -2,15 +2,13 @@ require File.dirname(__FILE__) + '/test_helper'
 require 'mocha'
 RAILS_ROOT = File.expand_path(File.dirname(__FILE__) + "/")
 
-class SetupTest < Test::Unit::TestCase
+class SetupTest < ActionController::TestCase
+  tests SeleniumController
+
   def setup
-    @controller = SeleniumController.new
     @controller.extend(SeleniumOnRails::PathsTestHelper)
     SeleniumController.any_instance.stubs(:clear_tables).returns([])
     SeleniumController.any_instance.stubs(:layout_path).returns(false)
-    ActionController::Routing::Routes.draw
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
   end
 
   def test_session_reset

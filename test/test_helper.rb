@@ -76,9 +76,7 @@ class Test::Unit::TestCase
   include Mocha::API
   include Mocha::ParameterMatchers
   include Mocha::Integration::TestUnit::RubyVersion186AndAbove
-end
 
-class ActiveSupport::TestCase
   def assert_text_equal expected, actual
     assert_equal clean_text(expected), clean_text(actual)
   end
