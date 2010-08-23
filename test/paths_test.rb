@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/test_helper'
 require 'mocha'
-RAILS_ROOT = File.expand_path(File.dirname(__FILE__) + "/")
+#RAILS_ROOT = File.expand_path(File.dirname(__FILE__) + "/")
 
 class SeleniumOnRails::PathsTest < ActiveSupport::TestCase
   
@@ -27,7 +27,11 @@ class SeleniumOnRails::PathsTest < ActiveSupport::TestCase
   end
   
   def test_view_path
-    assert_equal File.expand_path("#{RAILS_ROOT}/../lib/views/my_view"), view_path('my_view')
+    assert_equal File.expand_path(File.dirname(__FILE__) + "/../app/views/my_view"), view_path('my_view')
+  end
+
+  def test_log_path
+    assert_equal File.expand_path("#{RAILS_ROOT}/log/my_log"), log_path('my_log')
   end
   
   def test_layout_path
@@ -55,7 +59,7 @@ class SeleniumOnRails::PathsTest < ActiveSupport::TestCase
   end
   
   def test_selenium_path
-    assert_equal File.expand_path("#{RAILS_ROOT}/../selenium-core") + "/", selenium_path
+    assert_equal File.expand_path(File.dirname(__FILE__) + "/../selenium-core") + "/", selenium_path
   end
 
   def test_selenium_path_when_selenium_core_installation_is_not_found

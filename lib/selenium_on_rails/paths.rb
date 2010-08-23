@@ -14,7 +14,7 @@ module SeleniumOnRails
     end
     
     def view_path view
-      File.expand_path(File.dirname(__FILE__) + '/../views/' + view)
+      File.expand_path(File.dirname(__FILE__) + '/../../app/views/' + view)
     end
   
     # Returns the path to the layout template. The path is relative in relation
@@ -30,7 +30,7 @@ module SeleniumOnRails
     end
     
     def log_path log_file
-      File.expand_path(File.dirname(__FILE__) + '/../../log/' + File.basename(log_file))
+      File.expand_path(RAILS_ROOT + '/log/' + File.basename(log_file))
     end
 
     def skip_file? file
