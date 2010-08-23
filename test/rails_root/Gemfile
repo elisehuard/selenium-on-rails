@@ -5,5 +5,5 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'mocha', :require => 'mocha'
 
-gem 'selenium-on-rails', :path => '../..'
+gem 'selenium_on_rails', :path => '../..'
 gem 'RedCloth'
