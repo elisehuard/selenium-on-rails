@@ -1,25 +1,9 @@
 ENV["RAILS_ENV"] = "test"
-#RAILS_ROOT = "test" unless defined?(RAILS_ROOT)
+
+# note: there's a test rails application in test/rails_root to test the gem plugin with
 require File.expand_path(File.dirname(__FILE__) + "/rails_root/config/environment")
 
 $: << File.expand_path(File.dirname(__FILE__) + "/../lib")
-
-#require 'rubygems'
-#require 'action_view'
-#
-#gem 'actionpack'
-#require 'action_view/template_handler'
-#require 'action_view/template_handlers/builder'
-#require 'action_view/template_handlers/erb'
-#require 'action_view/template_handlers/rjs'
-#require 'action_view/helpers'
-#require 'action_view/base'
-#require 'action_view/partials'
-#require 'action_view/template_error'
-#gem 'activesupport'
-#require 'active_support'
-#
-#require 'action_controller'
 
 require 'selenium_on_rails/suite_renderer'
 require 'selenium_on_rails/fixture_loader'
@@ -31,15 +15,6 @@ require 'action_controller/test_process'
 require 'mocha/api'
 require 'mocha/parameter_matchers'
 require 'mocha/integration/test_unit/ruby_version_186_and_above'
-#SeleniumController.append_view_path File.expand_path(File.dirname(__FILE__))
-
-#def setup_controller_test(controller)
-#  @controller = controller.new
-#  ActionController::Routing::Routes.draw
-#  @request    = ActionController::TestRequest.new
-#  @response   = ActionController::TestResponse.new
-#end
-
 
 class SeleniumController
   attr_accessor :layout_override
@@ -94,22 +69,4 @@ end
 
 class TestView < ActionView::Base
   include SeleniumOnRails::PartialsSupport
-  
-  # alias_method :render_partial_without_override, :render_partial
-  # def render_partial partial_path = default_template_name, object = nil, local_assigns = nil, status = nil
-  #   if @override
-  #     partial = render :inline => @override, :type => @override_type, :locals => local_assigns
-  #     extract_commands_from_partial partial
-  #   else
-  #     render_partial_without_override partial_path, object, local_assigns, status
-  #   end
-  # end
-  # 
-  # def override_partial partial, type
-  #   @override, @override_type = partial, type
-  #   result = yield
-  #   @override, @override_type = nil, nil
-  #   result
-  # end
-  
 end

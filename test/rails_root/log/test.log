@@ -1962,3 +1962,297 @@ Completed in 6ms (View: 6 | 200 OK [http://test.host/selenium/tests/TestSuite.ht
 
 Processing SwitchEnvironmentController#index (for 0.0.0.0 at 2010-08-19 22:18:56) [GET]
 Completed in 3ms (View: 1 | 500 Internal Server Error [http://test.host/switch_environment]
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.7ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (1.2ms)
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"html.html"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/html.html
+Completed in 3ms (View: 0 | 200 OK [http://test.host/selenium/tests/html.html]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"missing"}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/tests/missing]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"own_layout.html"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/own_layout.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/tests/own_layout.html]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"partials/all_partials.rsel"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/partials/all_partials.rsel
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.8ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_html (0.5ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_rhtml (0.4ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_sel (0.9ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_rsel (0.8ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_rsel (0.8ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_nesting (2.0ms)
+Completed in 9ms (View: 0 | 200 OK [http://test.host/selenium/tests/partials%2Fall_partials.rsel]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"rhtml.rhtml"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/rhtml.rhtml
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.8ms)
+Completed in 3ms (View: 0 | 200 OK [http://test.host/selenium/tests/rhtml.rhtml]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"html.html"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/html.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/tests/html.html]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"rselenese.rsel"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/rselenese.rsel
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.9ms)
+Completed in 7ms (View: 0 | 200 OK [http://test.host/selenium/tests/rselenese.rsel]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"selenese.sel"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/selenese.sel
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.8ms)
+Completed in 3ms (View: 0 | 200 OK [http://test.host/selenium/tests/selenese.sel]
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.5ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.5ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.4ms)
+
+
+Processing SeleniumController#record (for 0.0.0.0 at 2010-08-24 08:52:13) [POST]
+  Parameters: {"testTable.1"=>"<table></table>", "testTable.2"=>"<table></table>", "suite"=>"<script>\n</script>\n<table>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/foo.sel\">Foo</a></td></tr>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/bar.sel\">Bar</a></td></tr>\n</table>\n"}
+Rendering record.rhtml
+Completed in 4ms (View: 1 | 200 OK [http://test.host/selenium/postResults?suite=%3Cscript%3E%0A%3C%2Fscript%3E%0A%3Ctable%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Ffoo.sel%22%3EFoo%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Fbar.sel%22%3EBar%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A%3C%2Ftable%3E%0A&testTable.1=%3Ctable%3E%3C%2Ftable%3E&testTable.2=%3Ctable%3E%3C%2Ftable%3E]
+
+
+Processing SeleniumController#record (for 0.0.0.0 at 2010-08-24 08:52:13) [POST]
+  Parameters: {"result"=>"Failed", "testTable.1"=>"<table></table>", "numTestFailures"=>"906", "numTestPasses"=>"1079", "testTable.2"=>"<table></table>", "numCommandFailures"=>"1027", "numCommandPasses"=>"3", "suite"=>"<script>\n</script>\n<table>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/foo.sel\">Foo</a></td></tr>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/bar.sel\">Bar</a></td></tr>\n</table>\n", "numCommandErrors"=>"57", "totalTime"=>"A long time"}
+Rendering record.rhtml
+Completed in 2ms (View: 0 | 200 OK [http://test.host/selenium/postResults?numCommandErrors=57&numCommandFailures=1027&numCommandPasses=3&numTestFailures=906&numTestPasses=1079&result=Failed&suite=%3Cscript%3E%0A%3C%2Fscript%3E%0A%3Ctable%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Ffoo.sel%22%3EFoo%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Fbar.sel%22%3EBar%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A%3C%2Ftable%3E%0A&testTable.1=%3Ctable%3E%3C%2Ftable%3E&testTable.2=%3Ctable%3E%3C%2Ftable%3E&totalTime=A+long+time]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"filename"=>""}
+Redirected to http://test.host/selenium/TestRunner.html?test=tests
+Completed in 0ms | 302 Found [http://test.host/selenium]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"filename"=>"missing.html"}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/missing.html]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"filename"=>"TestRunner.html"}
+Sending file /Users/elise/Ruby/selenium-on-rails/selenium-core/TestRunner.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/TestRunner.html]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"filename"=>"TestRunner.html"}
+Sending file /Users/elise/Ruby/selenium-on-rails/selenium-core/TestRunner.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/TestRunner.html]
+
+
+Processing SeleniumController#setup (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"keep_session"=>true}
+Rendering setup.rhtml
+Completed in 3ms (View: 3 | 200 OK [http://test.host/selenium/setup?keep_session=true]
+
+
+Processing SeleniumController#setup (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+Rendering setup.rhtml
+Completed in 2ms (View: 1 | 200 OK [http://test.host/selenium/setup]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"empty_suite"}
+Rendering test_suite.rhtml
+Completed in 2ms (View: 2 | 200 OK [http://test.host/selenium/tests/empty_suite]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>""}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/tests]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>""}
+Rendering test_suite.rhtml
+Completed in 106ms (View: 106 | 200 OK [http://test.host/selenium/tests]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"suite_one/subsuite"}
+Rendering test_suite.rhtml
+Completed in 1ms (View: 1 | 200 OK [http://test.host/selenium/tests/suite_one%2Fsubsuite]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"suite_one"}
+Rendering test_suite.rhtml
+Completed in 2ms (View: 2 | 200 OK [http://test.host/selenium/tests/suite_one]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+  Parameters: {"testname"=>"TestSuite.html"}
+Rendering test_suite.rhtml
+Completed in 6ms (View: 6 | 200 OK [http://test.host/selenium/tests/TestSuite.html]
+
+
+Processing SwitchEnvironmentController#index (for 0.0.0.0 at 2010-08-24 08:52:13) [GET]
+Completed in 3ms (View: 1 | 500 Internal Server Error [http://test.host/switch_environment]
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.7ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (1.2ms)
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"html.html"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/html.html
+Completed in 3ms (View: 0 | 200 OK [http://test.host/selenium/tests/html.html]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"missing"}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/tests/missing]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"own_layout.html"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/own_layout.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/tests/own_layout.html]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"partials/all_partials.rsel"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/partials/all_partials.rsel
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.9ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_html (0.5ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_rhtml (0.4ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_sel (0.9ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_rsel (0.8ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_rsel (0.9ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data/partials/_nesting (2.0ms)
+Completed in 10ms (View: 0 | 200 OK [http://test.host/selenium/tests/partials%2Fall_partials.rsel]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"rhtml.rhtml"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/rhtml.rhtml
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.9ms)
+Completed in 3ms (View: 0 | 200 OK [http://test.host/selenium/tests/rhtml.rhtml]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"html.html"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/html.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/tests/html.html]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"rselenese.rsel"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/rselenese.rsel
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.8ms)
+Completed in 6ms (View: 0 | 200 OK [http://test.host/selenium/tests/rselenese.rsel]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"selenese.sel"}
+Rendering /Users/elise/Ruby/selenium-on-rails/test_data/selenese.sel
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_partial (0.8ms)
+Completed in 3ms (View: 0 | 200 OK [http://test.host/selenium/tests/selenese.sel]
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.4ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.5ms)
+Rendered /Users/elise/Ruby/selenium-on-rails/test_data//_override (0.4ms)
+
+
+Processing SeleniumController#record (for 0.0.0.0 at 2010-08-24 08:54:23) [POST]
+  Parameters: {"testTable.1"=>"<table></table>", "testTable.2"=>"<table></table>", "suite"=>"<script>\n</script>\n<table>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/foo.sel\">Foo</a></td></tr>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/bar.sel\">Bar</a></td></tr>\n</table>\n"}
+Rendering record.rhtml
+Completed in 3ms (View: 1 | 200 OK [http://test.host/selenium/postResults?suite=%3Cscript%3E%0A%3C%2Fscript%3E%0A%3Ctable%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Ffoo.sel%22%3EFoo%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Fbar.sel%22%3EBar%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A%3C%2Ftable%3E%0A&testTable.1=%3Ctable%3E%3C%2Ftable%3E&testTable.2=%3Ctable%3E%3C%2Ftable%3E]
+
+
+Processing SeleniumController#record (for 0.0.0.0 at 2010-08-24 08:54:23) [POST]
+  Parameters: {"result"=>"Failed", "testTable.1"=>"<table></table>", "numTestFailures"=>"906", "numTestPasses"=>"1079", "testTable.2"=>"<table></table>", "numCommandFailures"=>"1027", "numCommandPasses"=>"3", "suite"=>"<script>\n</script>\n<table>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/foo.sel\">Foo</a></td></tr>\n  <tr><td bgcolor=\"#ccffcc\"><a href=\"/selenium/tests/bar.sel\">Bar</a></td></tr>\n</table>\n", "numCommandErrors"=>"57", "totalTime"=>"A long time"}
+Rendering record.rhtml
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/postResults?numCommandErrors=57&numCommandFailures=1027&numCommandPasses=3&numTestFailures=906&numTestPasses=1079&result=Failed&suite=%3Cscript%3E%0A%3C%2Fscript%3E%0A%3Ctable%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Ffoo.sel%22%3EFoo%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A++%3Ctr%3E%3Ctd+bgcolor%3D%22%23ccffcc%22%3E%3Ca+href%3D%22%2Fselenium%2Ftests%2Fbar.sel%22%3EBar%3C%2Fa%3E%3C%2Ftd%3E%3C%2Ftr%3E%0A%3C%2Ftable%3E%0A&testTable.1=%3Ctable%3E%3C%2Ftable%3E&testTable.2=%3Ctable%3E%3C%2Ftable%3E&totalTime=A+long+time]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"filename"=>""}
+Redirected to http://test.host/selenium/TestRunner.html?test=tests
+Completed in 0ms | 302 Found [http://test.host/selenium]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"filename"=>"missing.html"}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/missing.html]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"filename"=>"TestRunner.html"}
+Sending file /Users/elise/Ruby/selenium-on-rails/selenium-core/TestRunner.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/TestRunner.html]
+
+
+Processing SeleniumController#support_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"filename"=>"TestRunner.html"}
+Sending file /Users/elise/Ruby/selenium-on-rails/selenium-core/TestRunner.html
+Completed in 1ms (View: 0 | 200 OK [http://test.host/selenium/TestRunner.html]
+
+
+Processing SeleniumController#setup (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"keep_session"=>true}
+Rendering setup.rhtml
+Completed in 3ms (View: 3 | 200 OK [http://test.host/selenium/setup?keep_session=true]
+
+
+Processing SeleniumController#setup (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+Rendering setup.rhtml
+Completed in 2ms (View: 1 | 200 OK [http://test.host/selenium/setup]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>"empty_suite"}
+Rendering test_suite.rhtml
+Completed in 2ms (View: 2 | 200 OK [http://test.host/selenium/tests/empty_suite]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>""}
+Completed in 0ms (View: 0 | 404 Not Found [http://test.host/selenium/tests]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:23) [GET]
+  Parameters: {"testname"=>""}
+Rendering test_suite.rhtml
+Completed in 106ms (View: 105 | 200 OK [http://test.host/selenium/tests]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:24) [GET]
+  Parameters: {"testname"=>"suite_one/subsuite"}
+Rendering test_suite.rhtml
+Completed in 1ms (View: 1 | 200 OK [http://test.host/selenium/tests/suite_one%2Fsubsuite]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:24) [GET]
+  Parameters: {"testname"=>"suite_one"}
+Rendering test_suite.rhtml
+Completed in 2ms (View: 2 | 200 OK [http://test.host/selenium/tests/suite_one]
+
+
+Processing SeleniumController#test_file (for 0.0.0.0 at 2010-08-24 08:54:24) [GET]
+  Parameters: {"testname"=>"TestSuite.html"}
+Rendering test_suite.rhtml
+Completed in 6ms (View: 6 | 200 OK [http://test.host/selenium/tests/TestSuite.html]
+
+
+Processing SwitchEnvironmentController#index (for 0.0.0.0 at 2010-08-24 08:54:24) [GET]
+Completed in 3ms (View: 1 | 500 Internal Server Error [http://test.host/switch_environment]
