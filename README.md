@@ -19,6 +19,10 @@ This plugin does four things:
 Rails periodically changes the way that it renders pages, which unfortunately breaks backwards versions of Selenium on Rails.  Therefore there are different
 installation locations depending on your version of Rails:
 
+*Rails 2.3.8 (Rails 3 soon) *
+
+        gem install selenium_on_rails
+
 *Rails 2.2 and up:*
 
 	http://svn.openqa.org/svn/selenium-on-rails/stable/selenium-on-rails
@@ -40,11 +44,24 @@ The latest release is always kept on GitHub at
 
 To install:
 
+For the plugin version:
+
 1. Install Selenium on Rails: script/plugin install <URL>
 2. If you‘re on Windows, gem install win32-open3
 3. If the RedCloth gem is available the Selenese test cases can use it for better markup.
 4. Run the Rakefile in the plugin‘s directory to run the tests in order to see that everything works. (If RedCloth isn‘t installed a few tests will fail since they assume RedCloth is installed.)
 5. Create a test case: script/generate selenium <TestName>
+6. Start the server: script/server -e test
+7. Point your browser to localhost:3000/selenium
+8. If everything works as expected you should see the Selenium test runner. The north east frame contains all your test cases (just one for now), and the north frame contains your test case.
+
+For the gem version
+
+1. install the gem, and add it in the environment (config.gem) or in the Gemfile for bundler.
+2. Install the Rakefile and an example selenium.yml file in config
+    script/generate selenium-rails
+3. adapt config/selenium.yml to your system
+4. create a test case: script/generate selenium <TestName>
 6. Start the server: script/server -e test
 7. Point your browser to localhost:3000/selenium
 8. If everything works as expected you should see the Selenium test runner. The north east frame contains all your test cases (just one for now), and the north frame contains your test case.
