@@ -1,5 +1,4 @@
-require File.dirname(__FILE__) + '/test_helper'
-require 'mocha'
+require File.expand_path('../test_helper',__FILE__)
 
 class SeleniumOnRailsConfig
   def self.reset_config

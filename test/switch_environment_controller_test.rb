@@ -1,11 +1,11 @@
-require File.dirname(__FILE__) + '/test_helper'
+require File.expand_path('../test_helper',__FILE__)
 
 class SwitchEnvironmentControllerTest < ActionController::TestCase
 
   tests SwitchEnvironmentController 
 
   def setup
-    @config = mock()
+    #@config = mock()
     #setup_controller_test(SwitchEnvironmentController)
   end
   

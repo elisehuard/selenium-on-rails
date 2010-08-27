@@ -12,7 +12,7 @@
 # process manually, however, this is a temporary step toward improving
 # function parity.
 
-require File.dirname(__FILE__) + '/test_helper'
+require File.expand_path('../test_helper',__FILE__)
 
 class TestTheTestBuilderFunctions < Test::Unit::TestCase
 
