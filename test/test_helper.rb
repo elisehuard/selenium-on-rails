@@ -12,9 +12,7 @@ require File.expand_path(File.dirname(__FILE__) + "/../app/controllers/selenium_
 require File.expand_path(File.dirname(__FILE__) + "/../config/routes")
 require 'action_controller/test_process'
 
-require 'mocha/api'
-require 'mocha/parameter_matchers'
-require 'mocha/integration/test_unit/ruby_version_186_and_above'
+require 'mocha'
 
 class SeleniumController
   attr_accessor :layout_override
@@ -45,19 +43,17 @@ class SeleniumController
 end
 
 class Test::Unit::TestCase
-# mocha is included via bundler in the test rails application
-# for some reason this stops essential modules from being loaded
-# TODO investigate for cleaner solution, maybe in mocha itself
-  include Mocha::API
-  include Mocha::ParameterMatchers
-  include Mocha::Integration::TestUnit::RubyVersion186AndAbove
-
   def assert_text_equal expected, actual
     assert_equal clean_text(expected), clean_text(actual)
   end
   
   def clean_text text
     text.gsub("\t", '  ').gsub("\r", '').gsub("\n", '').gsub(/ *</, '<')
+  end
+
+  # slight hack to make sure mocks and stubs are torn down
+  def teardown
+    Mocha::Mockery.instance.stubba.unstub_all
   end
 end
 
