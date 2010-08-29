@@ -11,14 +11,14 @@ class SeleneseTest < Test::Unit::TestCase
   def render_selenese(page_title, input)
     create_sel_file_from(input, "html.sel")
     
-    @sel.render ActionView::Template.new(test_path_for("html.sel")), {'page_title' => page_title}
+    @sel.render ActionView::Template.new(do_test_path_for("html.sel")), {'page_title' => page_title}
   end
   
   def create_sel_file_from(input, name)
-    File.open(test_path_for(name), 'w+') { |index_file| index_file << input }
+    File.open(do_test_path_for(name), 'w+') { |index_file| index_file << input }
   end
   
-  def test_path_for(name)
+  def do_test_path_for(name)
     "#{File.expand_path(File.dirname(__FILE__) + "/../test_data")}/#{name}"
   end
    
@@ -182,7 +182,7 @@ END
     
     assert_selenese(expected, 'Partial support', input)
     
-    File.delete(test_path_for("_override.sel"))
+    File.delete(do_test_path_for("_override.sel"))
   end
    
   def test_partial_support_with_local_assigns
@@ -213,7 +213,7 @@ END_PARTIAL
     
     assert_selenese(expected, 'Partial support with local assigns', input)
     
-    File.delete(test_path_for("_override.html"))
+    File.delete(do_test_path_for("_override.html"))
   end
      
   def test_raised_when_more_than_three_columns

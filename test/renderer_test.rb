@@ -30,14 +30,14 @@ END
 <p>and it works...</p>
 </body></html>
 END
-    File.open(test_path_for('html.html'), 'w+') { |index_file| index_file << expected }
+    File.open(do_test_path_for('html.html'), 'w+') { |index_file| index_file << expected }
     get :test_file, :testname => 'html.html'
     assert_headers
     
     assert_text_equal expected, @response.body
   end
   
-  def test_path_for(name)
+  def do_test_path_for(name)
     "#{File.expand_path(File.dirname(__FILE__) + "/../test_data")}/#{name}"
   end
     

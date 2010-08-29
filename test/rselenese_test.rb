@@ -11,14 +11,14 @@ class RSeleneseTest < Test::Unit::TestCase
     @view = TestView.new
     @view.extend(SeleniumOnRails::PathsTestHelper)
     @sel = SeleniumOnRails::RSelenese.new(@view) 
-    @sel.render ActionView::Template.new(test_path_for("html.rsel")), {'page_title' => page_title}
+    @sel.render ActionView::Template.new(do_test_path_for("html.rsel")), {'page_title' => page_title}
   end
   
   def create_rsel_file_from(input, name)
-    File.open(test_path_for(name), 'w+') { |index_file| index_file << input }
+    File.open(do_test_path_for(name), 'w+') { |index_file| index_file << input }
   end
   
-  def test_path_for(name)
+  def do_test_path_for(name)
     "#{File.expand_path(File.dirname(__FILE__) + "/../test_data")}/#{name}"
   end
    
@@ -63,7 +63,7 @@ END
     @view.extend(SeleniumOnRails::PathsTestHelper)
     @sel = SeleniumOnRails::RSelenese.new(@view)
     
-    assert_text_equal expected_html, @sel.render(ActionView::Template.new(test_path_for("html.rsel")))
+    assert_text_equal expected_html, @sel.render(ActionView::Template.new(do_test_path_for("html.rsel")))
   end
  
   def test_element_locators
@@ -678,7 +678,7 @@ END
     
     assert_rselenese expected, 'Partial support', input
     
-    File.delete(test_path_for("_override.rsel"))
+    File.delete(do_test_path_for("_override.rsel"))
   end
   
   def test_partial_support_with_local_assigns
@@ -702,7 +702,7 @@ END_PARTIAL
 
     assert_rselenese expected, 'Partial support with local variables', input
     
-    File.delete(test_path_for("_override.rsel"))
+    File.delete(do_test_path_for("_override.rsel"))
   end
 
 end
