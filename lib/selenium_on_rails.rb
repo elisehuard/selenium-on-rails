@@ -1,6 +1,7 @@
 module SeleniumOnRails # :nodoc
 end
 
+require 'selenium_on_rails/engine'
 require 'selenium_on_rails/selenese'
 require 'selenium_on_rails/test_builder'
 require 'selenium_on_rails/rselenese'
