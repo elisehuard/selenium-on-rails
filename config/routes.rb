@@ -1,14 +1,8 @@
-  ActionController::Routing::Routes.draw do |map|
-     map.connect 'selenium/setup',
-       :controller => 'selenium', :action => 'setup'
-     map.connect 'selenium/tests/*testname',
-       :controller => 'selenium', :action => 'test_file'
-     map.connect 'selenium/postResults',
-       :controller => 'selenium', :action => 'record'
-     map.connect 'selenium/postResults/:logFile',
-       :controller => 'selenium', :action => 'record', :requirements => { :logFile => /.*/ }
-     map.connect 'selenium/*filename',
-       :controller => 'selenium', :action => 'support_file'
-     map.connect 'switch_environment',
-     :controller => 'switch_environment', :action => 'index'  
+  Rails::Application.routes.draw do |map|
+     match 'selenium/setup', :to => 'selenium#setup'
+     match 'selenium/tests/*testname', :to => 'selenium#test_file'
+     match 'selenium/postResults', :to => 'selenium#record'
+     match 'selenium/postResults/:logFile', :to => 'selenium#record', :requirements => { :logFile => /.*/ }
+     match 'selenium/*filename', :to => 'selenium#support_file'
+     match 'switch_environment', :to => 'switch_environment#index'  
   end
